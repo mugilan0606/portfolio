@@ -357,9 +357,29 @@ function SkillsSection() {
 							}}
 							onMouseDown={(e) => handleMouseDown(e, bubble)}
 						>
-							<span style={{ color: bubble.color }}>
-								{bubble.type === 'category' ? bubble.title : bubble.name}
-							</span>
+							{bubble.type === 'category' ? (
+								<span 
+									className={CN.generate('category-title')}
+									style={{ 
+										color: bubble.color,
+										position: 'absolute',
+										top: '-35px',
+										left: '50%',
+										transform: 'translateX(-50%)',
+										fontWeight: 600,
+										fontSize: '16px',
+										whiteSpace: 'nowrap',
+										textShadow: '0 2px 8px rgba(0,0,0,0.5)',
+										pointerEvents: 'none'
+									}}
+								>
+									{bubble.title}
+								</span>
+							) : (
+								<span style={{ color: bubble.color }}>
+									{bubble.name}
+								</span>
+							)}
 						</div>
 					))}
 				</div>
