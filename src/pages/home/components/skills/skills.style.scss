@@ -62,14 +62,14 @@
         
         // Mobile
         @media (max-width: 768px) {
-            height: 60vh;
+            height: 100vh;
             min-height: 400px;
             border-radius: px-to-rem(12);
         }
         
         // Small mobile
         @media (max-width: 480px) {
-            height: 50vh;
+            height: 110vh;
             min-height: 350px;
             border-radius: px-to-rem(8);
         }
