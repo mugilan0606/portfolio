@@ -1,0 +1,14 @@
+{
+    "hi": "Hi, I'm",
+    "hpe": {
+        "0": "Developed an automation framework with Ansible and Python, single-handedly automated server configuration tasks for ESXi, vCenter, DNS, vDS, multiple VMs - reducing deployment time from 6 days to 5 hours (97% decrease in deployment time) and contributed to over $40m in revenue",
+        "1": "Executed end-to-end infrastructure deployments on Baremetal servers and ESXi Hypervisors, including DNS setup, virtual switch and cluster creation, VM migration (vSS → vDS) without downtime, and provisioning of management VMs",
+        "2": "Spearheaded security of the CDC solution by including encryption mechanisms with AES-256 using HashiCorp for passwords",
+        "3": "Enhanced provisioning workflows by customizing Kickstart and enabling support for RHEL 8.8/9.2 and SUSE 15 SP5 in SAP HANA-based PDC solutions",
+        "4": "Implemented multilingual support in the automation application, enabling global accessibility and improving adoption across international teams"
+    },
+    "samit": {
+        "0": "Designed and deployed a sentiment analysis framework on 100k+ client emails using LSTM models with fine-grained sentiment categories, achieving 95% accuracy through optimized preprocessing and tuning",
+        "1": "Built a prototype application that enabled ticket prioritization and faster client response, reducing manual effort and improving customer satisfaction"
+    }
+}
