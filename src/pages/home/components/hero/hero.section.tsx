@@ -70,7 +70,7 @@ function HeroSection() {
 									data-tooltip-content="Email"
 									data-tooltip-place="bottom"
 								>
-									<Icon type="Mail" theme="filled" size={24}/>
+									<Icon type="Mail" theme="outline" size={24}/>
 								</Hyperlink>
 							</div>
 						</div>
