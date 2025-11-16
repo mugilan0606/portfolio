@@ -1,0 +1,193 @@
+.education-section {
+  padding: 6rem 0;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--accent-color);
+    letter-spacing: 0.1em;
+    text-shadow: 
+      0 0 5px var(--accent-color),
+      0 0 10px var(--accent-color);
+    animation: glow 2s ease-in-out infinite alternate;
+    
+    @media (min-width: 768px) {
+      font-size: 4rem;
+      letter-spacing: 0.07em;
+    }
+  }
+
+  &__timeline {
+    position: relative;
+    padding-left: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 1.5rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--accent-color);
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+
+  &__marker {
+    position: absolute;
+    left: -3rem;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+    background: var(--bg-color);
+    border: 3px solid var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    z-index: 2;
+  }
+
+  &__content {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-left: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--accent-color);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__degree {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 0;
+  }
+
+  &__duration {
+    font-size: 0.9rem;
+    color: var(--muted-color);
+    background: rgba(0, 255, 136, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    border: 1px solid var(--accent-color);
+  }
+
+  &__institution {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+
+  &__location,
+  &__gpa {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--muted-color);
+    margin-bottom: 0.5rem;
+
+    svg {
+      color: var(--accent-color);
+    }
+  }
+
+  &__coursework {
+    margin-top: 1.5rem;
+
+    h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--text-color);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--muted-color);
+
+        svg {
+          flex-shrink: 0;
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+      0 0 5px var(--accent-color),
+      0 0 10px var(--accent-color);
+  }
+  to {
+    text-shadow: 
+      0 0 8px var(--accent-color),
+      0 0 15px var(--accent-color),
+      0 0 50px var(--accent-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .education-section {
+    &__timeline {
+      padding-left: 2rem;
+
+      &::before {
+        left: 1rem;
+      }
+    }
+
+    &__marker {
+      left: -2rem;
+      width: 3rem;
+      height: 3rem;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__content {
+      margin-left: 1rem;
+    }
+  }
+}

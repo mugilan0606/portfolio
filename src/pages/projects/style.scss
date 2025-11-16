@@ -1,0 +1,98 @@
+.projects {
+  padding: 4rem 0;
+  min-height: 100vh;
+
+  &__card {
+    background: var(--color-background-secondary, #1a1a2e);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-primary, #00d4ff);
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-secondary, #a0a0a0);
+    flex-grow: 1;
+  }
+
+  &__technologies {
+    margin-bottom: 1.5rem;
+
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-text-primary, #ffffff);
+    }
+  }
+
+  &__tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__tag {
+    background: var(--color-primary-dark, #0a4d5c);
+    color: var(--color-primary-light, #00d4ff);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  &__features {
+    margin-bottom: 1.5rem;
+
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-text-primary, #ffffff);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--color-text-secondary, #a0a0a0);
+
+        svg {
+          margin-top: 0.2rem;
+          flex-shrink: 0;
+          color: var(--color-success, #00ff88);
+        }
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+  }
+}

@@ -1,0 +1,250 @@
+.projects-section {
+  padding: 6rem 0;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .flex-row {
+    row-gap: 4rem !important;
+    column-gap: 2rem !important;
+    align-items: stretch !important;
+  }
+  
+  .flex-col {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-bottom: 3rem !important;
+  }
+
+  &__section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--accent-color);
+    letter-spacing: 0.1em;
+    text-shadow: 
+      0 0 5px var(--accent-color),
+      0 0 10px var(--accent-color);
+    animation: glow 2s ease-in-out infinite alternate;
+    
+    @media (min-width: 768px) {
+      font-size: 4rem;
+      letter-spacing: 0.15em;
+    }
+  }
+
+  &__card {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 500px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--accent-color);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3);
+      border-color: var(--accent-color);
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--muted-color);
+  }
+
+  &__technologies {
+    margin-bottom: 1.5rem;
+
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+    }
+  }
+
+  &__tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__tag {
+    background: rgba(0, 212, 170, 0.1);
+    color: var(--accent-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--accent-color);
+  }
+
+  &__features {
+    margin-bottom: 1.5rem;
+
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--muted-color);
+
+        svg {
+          margin-top: 0.2rem;
+          flex-shrink: 0;
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+    flex-wrap: wrap;
+    
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 2px solid transparent;
+      
+      svg {
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover {
+        transform: translateY(-2px);
+        
+        svg {
+          transform: scale(1.2) rotate(360deg);
+        }
+      }
+      
+      &:active {
+        transform: translateY(0);
+      }
+    }
+    
+    // GitHub button - Teal gradient with icon bounce
+    a[href*="github"] {
+      background: linear-gradient(135deg, #00d4aa, #00cce2) !important;
+      color: white !important;
+      border-color: #00d4aa !important;
+      box-shadow: 0 2px 8px rgba(0, 212, 170, 0.3);
+      
+      &:hover {
+        background: linear-gradient(135deg, #0076dd, #008f73) !important;
+        box-shadow: 0 4px 12px rgba(0, 212, 170, 0.5) !important;
+      }
+    }
+    
+    // Kaggle button - Teal gradient with icon bounce
+    a[href*="kaggle"] {
+      background: linear-gradient(135deg, #00d4aa, #00cce2) !important;
+      color: white !important;
+      border-color: #00d4c8 !important;
+      box-shadow: 0 2px 8px rgba(0, 212, 200, 0.3);
+      
+      &:hover {
+        background: linear-gradient(135deg,  #0076dd, #008f73) !important;
+        box-shadow: 0 4px 12px rgba(0, 212, 200, 0.5) !important;
+      }
+    }
+    
+    // Demo/Live link - Teal gradient with icon bounce
+    a[href*="pub.dev"],
+    a:not([href*="github"]):not([href*="kaggle"]) {
+      background: linear-gradient(135deg, #00d4aa, #00cce2) !important;
+      color: white !important;
+      border-color: #00d4ff !important;
+      box-shadow: 0 2px 8px rgba(0, 212, 255, 0.3);
+      
+      &:hover {
+        background: linear-gradient(135deg,  #0076dd, #008f73) !important;
+        box-shadow: 0 4px 12px rgba(0, 212, 255, 0.5) !important;
+      }
+    }
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+      0 0 5px var(--accent-color),
+      0 0 10px var(--accent-color);
+  }
+  to {
+    text-shadow: 
+      0 0 8px var(--accent-color),
+      0 0 15px var(--accent-color),
+      0 0 20px var(--accent-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 4rem 1rem;
+    padding-top: 120px;
+
+    &__section-title {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    &__card {
+      min-height: auto;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+
+    &__description {
+      margin-bottom: 1rem;
+    }
+
+    &__technologies {
+      margin-bottom: 1.5rem;
+    }
+    
+    .flex-col {
+      margin-bottom: 0;
+    }
+  }
+}

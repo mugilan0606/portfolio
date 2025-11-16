@@ -1,0 +1,152 @@
+.education {
+  padding: 4rem 0;
+  min-height: 100vh;
+
+  &__timeline {
+    position: relative;
+    padding-left: 3rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 1.5rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--color-primary, #00d4ff);
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+
+  &__marker {
+    position: absolute;
+    left: -3rem;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+    background: var(--color-background-secondary, #1a1a2e);
+    border: 3px solid var(--color-primary, #00d4ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary, #00d4ff);
+    z-index: 2;
+  }
+
+  &__content {
+    background: var(--color-background-secondary, #1a1a2e);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-left: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__degree {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary, #00d4ff);
+    margin: 0;
+  }
+
+  &__duration {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary, #a0a0a0);
+    background: var(--color-primary-dark, #0a4d5c);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+  }
+
+  &__institution {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-primary, #ffffff);
+  }
+
+  &__location,
+  &__gpa {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-text-secondary, #a0a0a0);
+    margin-bottom: 0.5rem;
+
+    svg {
+      color: var(--color-primary, #00d4ff);
+    }
+  }
+
+  &__coursework {
+    margin-top: 1.5rem;
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--color-text-primary, #ffffff);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--color-text-secondary, #a0a0a0);
+
+        svg {
+          flex-shrink: 0;
+          color: var(--color-success, #00ff88);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .education {
+    &__timeline {
+      padding-left: 2rem;
+
+      &::before {
+        left: 1rem;
+      }
+    }
+
+    &__marker {
+      left: -2rem;
+      width: 3rem;
+      height: 3rem;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__content {
+      margin-left: 1rem;
+    }
+  }
+}

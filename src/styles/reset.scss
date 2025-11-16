@@ -1,0 +1,101 @@
+@use "sass:math";
+// @import '@/styles/index';
+
+body {
+  --bg-color: #0f0f1e;
+  --text-color: #ffffff;
+  --accent-color: #00d4ff;
+  --secondary-color: #1a1a2e;
+  --muted-color: #a0a0a0;
+  
+  transition: background-color 0.6s ease, color 0.6s ease;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 14px;
+  position: relative;
+  cursor: default;
+
+  @include respond-to(md) {
+    font-size: 14px;
+  }
+  @include respond-to(xxl) {
+    font-size: 18px;
+  }
+}
+
+/* Custom cursor with theme color */
+* {
+  cursor: inherit;
+}
+
+a, button, [role="button"], input[type="submit"], input[type="button"] {
+  cursor: pointer;
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+/* Hero Section - Dark Red Theme */
+body[data-theme="hero"] {
+  --bg-color: #1a0a0f;
+  --text-color: #ffffff;
+  --accent-color: #ff4444;
+  --secondary-color: #2a1519;
+  --muted-color: #d4a5a5;
+}
+
+/* Experience Section - Orange Theme */
+body[data-theme="experience"] {
+  --bg-color: #1f1105;
+  --text-color: #ffffff;
+  --accent-color: #ff8c42;
+  --secondary-color: #2f1f0a;
+  --muted-color: #d4b895;
+}
+
+/* Projects Section - Dark Teal Theme */
+body[data-theme="projects"] {
+  --bg-color: #0a1f1f;
+  --text-color: #ffffff;
+  --accent-color: #00d4aa;
+  --secondary-color: #15292e;
+  --muted-color: #a5d4c8;
+}
+
+/* Education Section - Lime Green Theme */
+body[data-theme="education"] {
+  --bg-color: #0f1a0a;
+  --text-color: #ffffff;
+  --accent-color: #bfff00;
+  --secondary-color: #1a2915;
+  --muted-color: #d4e8a5;
+}
+
+/* Publications Section - Dark Violet Theme */
+body[data-theme="publications"] {
+  --bg-color: #150a1f;
+  --text-color: #ffffff;
+  --accent-color: #a855f7;
+  --secondary-color: #221533;
+  --muted-color: #d4a5d4;
+}
+
+/* Skills Section - Navy Blue Theme */
+body[data-theme="skills"] {
+  --bg-color: #0a1628;
+  --text-color: #ffffff;
+  --accent-color: #60a5fa;
+  --secondary-color: #1e3a5e;
+  --muted-color: #cbd5e1;
+}
+
+/* Medium Section - Default Dark Theme */
+body[data-theme="medium"] {
+  --bg-color: #0f0f1e;
+  --text-color: #ffffff;
+  --accent-color: #00d4ff;
+  --secondary-color: #1a1a2e;
+  --muted-color: #a0a0a0;
+}
