@@ -1,0 +1,42 @@
+@import '@/styles/index';
+
+.buy-coffee {
+    position: fixed;
+    bottom: px-to-rem(20);
+    right: px-to-rem(20);
+    z-index: 100;
+    
+    display: flex;
+    align-items: center;
+    gap: px-to-rem(8);
+    padding: px-to-rem(12) px-to-rem(20);
+    
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border-radius: px-to-rem(25);
+    
+    font-weight: 600;
+    font-size: px-to-rem(14);
+    text-decoration: none;
+    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.6s ease;
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px var(--accent-color);
+    }
+    
+    svg {
+        transition: transform 0.3s ease;
+    }
+    
+    &:hover svg {
+        transform: rotate(-10deg) scale(1.1);
+    }
+    
+    @include respond-to(md) {
+        bottom: px-to-rem(30);
+        right: px-to-rem(30);
+    }
+}
