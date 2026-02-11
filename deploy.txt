@@ -1,0 +1,4 @@
+use:
+yarn start to start the server locally.
+yarn build and yarn deploy to deploy the server.
+  
