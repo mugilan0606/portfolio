@@ -57,6 +57,14 @@ function PublicationsSection() {
 			location: 'Coimbatore, India',
 			doi: '10.1109/ICAECA63854.2025.11012309',
 			link: 'https://doi.org/10.1109/ICAECA63854.2025.11012309'
+		},
+		{
+			title: 'Assessing Domain-Level Susceptibility to Emergent Misalignment from Narrow Finetuning',
+			venue: 'arXiv:2602.00298',
+			date: 'Jan 30, 2026',
+			location: '',
+			doi: '10.48550/arXiv.2602.00298',
+			link: 'https://doi.org/10.48550/arXiv.2602.00298'
 		}
 	];
 
