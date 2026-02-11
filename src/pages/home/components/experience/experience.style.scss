@@ -21,10 +21,10 @@
         margin-bottom: px-to-rem(60);
         color: var(--accent-color);
         letter-spacing: 0.1em;
-        text-shadow: 
-            0 0 5px var(--accent-color),
-            0 0 10px var(--accent-color);
-        animation: glow 2s ease-in-out infinite alternate;
+        // text-shadow: 
+        //     0 0 5px var(--accent-color),
+        //     0 0 10px var(--accent-color);
+        // animation: glow 2s ease-in-out infinite alternate;
 
         @include respond-to(md) {
             font-size: px-to-rem(64);
