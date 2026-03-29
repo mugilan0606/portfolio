@@ -22,6 +22,21 @@ function Projects() {
 
 	const projectsList: Project[] = [
 		{
+			title: 'DevDocs.ai',
+			description: 'AI-powered documentation assistant for code repositories with a Flask backend and Vite frontend. Supports guided setup, Google OAuth, and split deployment across Render and Vercel for a production-ready developer workflow.',
+			technologies: ['Python', 'Flask', 'Gunicorn', 'React', 'Vite', 'SQLite', 'AWS S3', 'Google OAuth', 'OpenAI API', 'Groq API'],
+			features: [
+				'RAG-powered chat for repository Q&A',
+				'Multi-provider LLM support (OpenAI and Groq/Llama)',
+				'Google Sign-in with account history persistence',
+				'Auto-generated PDF docs and architecture summaries',
+				'Mermaid sequence diagrams and API/setup/test outputs',
+				'Deployed using Render backend and Vercel frontend'
+			],
+			demo: 'https://dev-docs-app.vercel.app/',
+			github: 'https://github.com/mugilan0606/DevDocs'
+		},
+		{
 			title: 'Infrastructure Automation Framework',
 			description: 'Enterprise-grade automation framework developed at HPE using Ansible and Python. Automated server configuration for ESXi, vCenter, and multiple VMs, reducing deployment time from 6 days to 5 hours (97% decrease), contributing to over $40M in revenue.',
 			technologies: ['Python', 'Ansible', 'ESXi', 'vCenter', 'RHEL', 'SUSE', 'HashiCorp'],

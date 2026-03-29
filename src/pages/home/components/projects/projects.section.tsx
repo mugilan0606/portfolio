@@ -23,6 +23,20 @@ function ProjectsSection() {
 	const projectsList: Project[] = [
 		
 		{
+			title: 'DevDocs.ai',
+			description: 'AI-powered documentation assistant for code repositories with a Flask backend and Vite frontend. Supports guided setup, Google OAuth, and split deployment across Render and Vercel for a production-ready developer workflow.',
+			technologies: ['Python', 'Flask', 'Gunicorn', 'React', 'Vite', 'SQLite', 'AWS S3', 'Google OAuth', 'OpenAI API', 'Groq API'],
+			features: [
+				'RAG-powered chat for repository Q&A',
+				'Multi-provider LLM support (OpenAI and Groq/Llama)',
+				'Google Sign-in with account history persistence',
+				'Auto-generated PDF docs and architecture summaries',
+				'Mermaid sequence diagrams and API/setup/test outputs',
+				'Deployed using Render backend and Vercel frontend'
+			],
+			demo: 'https://dev-docs-app.vercel.app/'
+		},
+		{
 			title: 'Website Designing Platform for Small Scale Industries',
 			description: 'Scalable web portal enabling deployment of customizable website templates for product showcasing. Provides small-scale business owners with a cost-effective solution to establish professional online presence.',
 			technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'AngularJS', 'MongoDB'],
