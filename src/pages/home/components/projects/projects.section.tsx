@@ -75,32 +75,32 @@ function ProjectsSection() {
 			],
 			demo: 'https://pub.dev/packages/easy_encryption'
 		},
-		{
-			title: 'Vehicle Monitoring & Accident Detection System',
-			description: 'IoT-based real-time accident detection system using MPU6050, GPS, GSM, and NodeMCU. Automatically detects crashes, retrieves GPS coordinates, sends SMS alerts to emergency contacts, and uploads critical event data to the cloud.',
-			technologies: [
-				'Arduino Uno',
-				'MPU6050',
-				'801S Vibration Sensor',
-				'SIM28ML GPS Module',
-				'SIM900 GSM Module',
-				'NodeMCU ESP8266',
-				'Processing (Java)',
-				'TinyGPS++',
-				'SoftwareSerial'
-			],
-			features: [
-				'Real-time accident detection using motion and vibration sensors',
-				'GPS-based location tracking',
-				'Automatic SMS alerts to emergency contacts',
-				'Cloud data upload via NodeMCU',
-				'User override button for false-alarm prevention',
-				'Audible buzzer alert upon detected crash',
-				'MPU6050 3D orientation visualizer using Processing',
-				'Low-cost and scalable IoT architecture'
-			],
-			github: 'https://github.com/mugilan0606/Vehicle-Collision-monitoring-using-IOT.git'
-		},
+		// {
+		// 	title: 'Vehicle Monitoring & Accident Detection System',
+		// 	description: 'IoT-based real-time accident detection system using MPU6050, GPS, GSM, and NodeMCU. Automatically detects crashes, retrieves GPS coordinates, sends SMS alerts to emergency contacts, and uploads critical event data to the cloud.',
+		// 	technologies: [
+		// 		'Arduino Uno',
+		// 		'MPU6050',
+		// 		'801S Vibration Sensor',
+		// 		'SIM28ML GPS Module',
+		// 		'SIM900 GSM Module',
+		// 		'NodeMCU ESP8266',
+		// 		'Processing (Java)',
+		// 		'TinyGPS++',
+		// 		'SoftwareSerial'
+		// 	],
+		// 	features: [
+		// 		'Real-time accident detection using motion and vibration sensors',
+		// 		'GPS-based location tracking',
+		// 		'Automatic SMS alerts to emergency contacts',
+		// 		'Cloud data upload via NodeMCU',
+		// 		'User override button for false-alarm prevention',
+		// 		'Audible buzzer alert upon detected crash',
+		// 		'MPU6050 3D orientation visualizer using Processing',
+		// 		'Low-cost and scalable IoT architecture'
+		// 	],
+		// 	github: 'https://github.com/mugilan0606/Vehicle-Collision-monitoring-using-IOT.git'
+		// },
 	];
 
 	return (
