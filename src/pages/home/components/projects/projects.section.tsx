@@ -21,6 +21,32 @@ function ProjectsSection() {
 	const CN = new ClassNames('projects-section');
 
 	const projectsList: Project[] = [
+		{
+			title: "Let's Debate",
+			description: "Multi-agent AI company comparison platform where users add companies as agents, let them gather structured web intelligence, and run multi-round debates to answer comparative business questions in real time.",
+			technologies: [
+				"TypeScript",
+				"Cloudflare Workers",
+				"Cloudflare Agents SDK",
+				"Durable Objects",
+				"D1",
+				"Vectorize",
+				"Workers AI",
+				"React",
+				"Vite",
+				"WebSockets"
+			],
+			features: [
+				"Add and manage multiple company-specific agents",
+				"Background web scraping and profile generation for each company",
+				"Real-time split-screen UI for agent management and chat",
+				"Multi-round debate flow with opening statements and 3 rebuttal cycles",
+				"Confidence scoring, ranking, and tie-break based final verdicts",
+				"Persistent company state using Durable Objects and D1"
+			],
+			demo: "https://cf-ai-competitor-research.mugilan0606.workers.dev/",
+			github: "https://github.com/mugilan0606/cf_ai_letsdebate"
+		},
 		
 		{
 			title: 'DevDocs.ai',
