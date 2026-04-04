@@ -63,18 +63,6 @@ function Projects() {
 			github: 'https://github.com/mugilan0606/DevDocs'
 		},
 		{
-			title: 'Infrastructure Automation Framework',
-			description: 'Enterprise-grade automation framework developed at HPE using Ansible and Python. Automated server configuration for ESXi, vCenter, and multiple VMs, reducing deployment time from 6 days to 5 hours (97% decrease), contributing to over $40M in revenue.',
-			technologies: ['Python', 'Ansible', 'ESXi', 'vCenter', 'RHEL', 'SUSE', 'HashiCorp'],
-			features: [
-				'97% reduction in deployment time',
-				'End-to-end infrastructure automation',
-				'AES-256 encryption for security',
-				'Multilingual support for global teams',
-				'Support for RHEL 8.8/9.2 and SUSE 15 SP5'
-			]
-		},
-		{
 			title: 'Website Designing Platform for Small Scale Industries',
 			description: 'Scalable web portal enabling deployment of customizable website templates for product showcasing. Provides small-scale business owners with a cost-effective solution to establish professional online presence.',
 			technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'AngularJS', 'MongoDB'],
@@ -111,8 +99,7 @@ function Projects() {
 				'Firebase integration for secure storage',
 				'Easy integration with existing chatbots'
 			],
-			github: 'YOUR_GITHUB_REPO_LINK',
-			demo: 'https://pub.dev/packages/yourpackage'
+			demo: 'https://pub.dev/packages/easy_encryption'
 		},
 		{
 			title: 'Sentiment Analysis Framework',
