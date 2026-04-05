@@ -1,0 +1,19 @@
+.scroll-fade-section {
+  position: relative;
+  background: transparent;
+  opacity: 1;
+  transition: none;
+
+  &__content {
+    position: relative;
+    transform-origin: 50% 50%;
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-fade-section__content {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

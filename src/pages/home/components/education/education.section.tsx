@@ -50,7 +50,7 @@ function EducationSection() {
 	];
 
 	return (
-		<section className={CN.generate()}>
+		<div className={CN.generate()}>
 			<Container>
 				<h2 className={CN.generate('section-title')}>Education</h2>
 				<div className={CN.generate('timeline')}>
@@ -89,7 +89,7 @@ function EducationSection() {
 					))}
 				</div>
 			</Container>
-		</section>
+		</div>
 	);
 }
 

@@ -1,6 +1,11 @@
 @use "sass:math";
 @import '@/styles/index';
 
+.home-page {
+  position: relative;
+  z-index: 1;
+}
+
 // .experience {
 //     position: relative;
 //     padding: px-to-rem(50) px-to-rem(20);

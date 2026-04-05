@@ -1,0 +1,101 @@
+.ambient-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+
+  &__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.22;
+    animation: ambient-float 28s ease-in-out infinite;
+
+    &--a {
+      width: min(55vw, 480px);
+      height: min(55vw, 480px);
+      top: -12%;
+      left: -8%;
+      background: radial-gradient(
+        circle at 30% 30%,
+        rgba(0, 212, 170, 0.55),
+        transparent 65%
+      );
+      animation-delay: 0s;
+    }
+
+    &--b {
+      width: min(70vw, 620px);
+      height: min(70vw, 620px);
+      bottom: -25%;
+      right: -15%;
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba(96, 165, 250, 0.45),
+        rgba(168, 85, 247, 0.25),
+        transparent 70%
+      );
+      animation-delay: -9s;
+      animation-duration: 36s;
+    }
+
+    &--c {
+      width: min(40vw, 360px);
+      height: min(40vw, 360px);
+      top: 42%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 140, 66, 0.2),
+        transparent 60%
+      );
+      opacity: 0.14;
+      animation-delay: -4s;
+      animation-duration: 22s;
+    }
+  }
+
+  &__grid {
+    position: absolute;
+    inset: -50%;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: 0.35;
+    animation: ambient-drift 120s linear infinite;
+  }
+}
+
+@keyframes ambient-float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(3%, 4%) scale(1.05);
+  }
+  66% {
+    transform: translate(-2%, 2%) scale(0.96);
+  }
+}
+
+@keyframes ambient-drift {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-background__orb,
+  .ambient-background__grid {
+    animation: none;
+  }
+}

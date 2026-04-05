@@ -45,40 +45,17 @@ const router = createBrowserRouter([
 	},
 ]);
 
+const CURSOR_GOLD_RGB = '212, 175, 55';
+
 const CustomCursor = () => {
 	const [position, setPosition] = useState({ x: -100, y: -100 });
 	const [trailingPosition, setTrailingPosition] = useState({ x: -100, y: -100 });
 	const [isClicking, setIsClicking] = useState(false);
 	const [isHovering, setIsHovering] = useState(false);
-	const [cursorColor, setCursorColor] = useState('255, 68, 68');
 	const [distance, setDistance] = useState(0);
 
-	useEffect(() => {
-		// Update cursor color based on theme
-		const updateCursorColor = () => {
-			const theme = document.body.getAttribute('data-theme');
-			const colorMap: { [key: string]: string } = {
-				'hero': '255, 68, 68',
-				'experience': '255, 140, 66',
-				'projects': '0, 212, 170',
-				'education': '191, 255, 0',
-				'publications': '168, 85, 247',
-				'skills': '96, 165, 250',
-				'medium': '0, 212, 255',
-			};
-			setCursorColor(colorMap[theme || 'hero'] || '255, 68, 68');
-		};
-
-		updateCursorColor();
-
-		const observer = new MutationObserver(() => updateCursorColor());
-		observer.observe(document.body, {
-			attributes: true,
-			attributeFilter: ['data-theme']
-		});
-
-		return () => observer.disconnect();
-	}, []);
+	// Theme-based cursor colors disabled (single gold palette)
+	const cursorColor = CURSOR_GOLD_RGB;
 
 	useEffect(() => {
 		const handleMouseMove = (e: MouseEvent) => {
@@ -181,7 +158,7 @@ const CustomCursor = () => {
 					pointerEvents: 'none',
 					zIndex: 10000,
 					transform: `translate(-50%, -50%) scale(${isClicking ? 1.5 : 1})`,
-					transition: 'transform 0.15s ease, background-color 0.6s ease',
+					transition: 'transform 0.15s ease',
 					mixBlendMode: 'difference',
 				}}
 			/>
@@ -198,7 +175,7 @@ const CustomCursor = () => {
 					pointerEvents: 'none',
 					zIndex: 9999,
 					transform: `translate(-50%, -50%) scale(${calculateScale()})`,
-					transition: 'border-color 0.6s ease',
+					transition: 'border-color 0.15s ease',
 				}}
 			/>
 			{/* Glow effect on click */}

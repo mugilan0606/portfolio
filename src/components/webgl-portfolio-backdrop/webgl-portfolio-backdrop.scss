@@ -1,0 +1,28 @@
+.webgl-portfolio-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  min-width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 50;
+  pointer-events: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+  &__canvas {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: top;
+    pointer-events: none !important;
+  }
+}

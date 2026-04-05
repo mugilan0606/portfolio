@@ -49,7 +49,7 @@ function ExperienceSection() {
 	];
 
 	return (
-		<section className={CN.generate()}>
+		<div className={CN.generate()}>
 			<Container>
 				<h2 className={CN.generate('section-title')}>Experience</h2>
 				{experiencesList.map((item: Experience) => (
@@ -72,7 +72,7 @@ function ExperienceSection() {
 					</div>
 				))}
 			</Container>
-		</section>
+		</div>
 	);
 }
 

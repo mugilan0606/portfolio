@@ -413,7 +413,7 @@ function SkillsSection() {
 	];
 
 	return (
-		<section className={CN.generate()} data-theme="skills">
+		<div className={CN.generate()}>
 			<Container>
 				<h2 className={CN.generate('section-title')}>Skills</h2>
 				<div className={CN.generate('grid')}>
@@ -431,7 +431,7 @@ function SkillsSection() {
 					))}
 				</div>
 			</Container>
-		</section>
+		</div>
 	);
 }
 

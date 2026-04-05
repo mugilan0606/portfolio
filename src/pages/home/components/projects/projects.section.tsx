@@ -130,7 +130,7 @@ function ProjectsSection() {
 	];
 
 	return (
-		<section className={CN.generate()} data-theme="projects">
+		<div className={CN.generate()}>
 			<Container>
 				<h2 className={CN.generate('section-title')}>Projects</h2>
 				<FlexRow>
@@ -197,7 +197,7 @@ function ProjectsSection() {
 					))}
 				</FlexRow>
 			</Container>
-		</section>
+		</div>
 	);
 }
 

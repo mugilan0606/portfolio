@@ -15,7 +15,7 @@ function HeroSection() {
 	const CN = new ClassNames('hero');
 
 	return (
-		<section className={CN.generate('')} data-theme="hero">
+		<div className={CN.generate('')}>
 			<span className={CN.generate('circle', ['one'])}/>
 			<span className={CN.generate('circle', ['two'])}/>
 			<Container>
@@ -85,7 +85,7 @@ function HeroSection() {
 				</FlexRow>
 			</Container>
 			<span className={'hero-mouse'}/>
-		</section>
+		</div>
 	);
 }
 

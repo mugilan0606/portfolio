@@ -69,12 +69,12 @@ function PublicationsSection() {
 	];
 
 	return (
-		<section className={CN.generate()}>
+		<div className={CN.generate()}>
 			<Container>
 				<h2 className={CN.generate('section-title')}>Publications</h2>
 				<div className={CN.generate('list')}>
-					{publicationsList.map((pub, index) => (
-						<div key={index} className={CN.generate('item')}>
+					{[...publicationsList].reverse().map((pub, index) => (
+						<div key={pub.doi ?? pub.title} className={CN.generate('item')}>
 							<div className={CN.generate('number')}>{index + 1}</div>
 							<div className={CN.generate('content')}>
 								<h3 className={CN.generate('title')}>{pub.title}</h3>
@@ -130,7 +130,7 @@ function PublicationsSection() {
 					</ul>
 				</div> */}
 			</Container>
-		</section>
+		</div>
 	);
 }
 
