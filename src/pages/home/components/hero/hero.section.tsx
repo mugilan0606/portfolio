@@ -7,6 +7,7 @@ import Hyperlink from '@/components/hyperlink';
 import Linkedin from '@/icons/linkedin';
 import links from '@/constants/links.json';
 import './hero.style.scss';
+import HeroCompactDiagram from './hero-compact-diagram';
 import { ClassNames } from '@/modules/classNames';
 
 
@@ -77,9 +78,7 @@ function HeroSection() {
 					</FlexCol>
 					<FlexCol xs={24} sm={24} md={6} center={true}>
 						<div className={CN.generate('image')}>
-							<figure>
-								<img src={'Hero.jpg'} alt="Mugilan Arulvanan"/>
-							</figure>
+							<HeroCompactDiagram />
 						</div>
 					</FlexCol>
 				</FlexRow>
