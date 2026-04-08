@@ -73,6 +73,27 @@ $baseClass: 'hyperlink';
             color: darken(#c7bbb3, 10%);
         }
     }
+    &--primary-gold {
+        background-color: #d4af37;
+        color: #111111;
+        border-color: #d4af37;
+
+        &:not(.#{$baseClass}--disabled):hover {
+            background-color: darken(#d4af37, 8%);
+            border-color: darken(#d4af37, 8%);
+            color: #111111;
+        }
+    }
+    &--linear-gold {
+        border-color: #d4af37;
+        border-style: solid;
+        color: #d4af37;
+
+        &:not(.#{$baseClass}--disabled):hover {
+            border-color: lighten(#d4af37, 8%);
+            color: lighten(#d4af37, 8%);
+        }
+    }
     &--ghost-dark {
         color: #342627;
 

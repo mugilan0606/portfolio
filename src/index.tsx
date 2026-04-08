@@ -48,6 +48,10 @@ const router = createBrowserRouter([
 const CURSOR_GOLD_RGB = '212, 175, 55';
 
 const CustomCursor = () => {
+	const [enabled, setEnabled] = useState(() => {
+		if (typeof window === 'undefined') return false;
+		return window.matchMedia('(pointer: fine) and (hover: hover)').matches;
+	});
 	const [position, setPosition] = useState({ x: -100, y: -100 });
 	const [trailingPosition, setTrailingPosition] = useState({ x: -100, y: -100 });
 	const [isClicking, setIsClicking] = useState(false);
@@ -58,6 +62,15 @@ const CustomCursor = () => {
 	const cursorColor = CURSOR_GOLD_RGB;
 
 	useEffect(() => {
+		const mq = window.matchMedia('(pointer: fine) and (hover: hover)');
+		const onChange = () => setEnabled(mq.matches);
+		onChange();
+		mq.addEventListener('change', onChange);
+		return () => mq.removeEventListener('change', onChange);
+	}, []);
+
+	useEffect(() => {
+		if (!enabled) return;
 		const handleMouseMove = (e: MouseEvent) => {
 			setPosition({ x: e.clientX, y: e.clientY });
 		};
@@ -88,10 +101,11 @@ const CustomCursor = () => {
 			document.removeEventListener('mouseup', handleMouseUp);
 			document.removeEventListener('mouseover', handleMouseOver);
 		};
-	}, []);
+	}, [enabled]);
 
 	// Smooth trailing effect for outer circle
 	useEffect(() => {
+		if (!enabled) return;
 		let rafId: number;
 		
 		const animate = () => {
@@ -116,7 +130,7 @@ const CustomCursor = () => {
 		rafId = requestAnimationFrame(animate);
 
 		return () => cancelAnimationFrame(rafId);
-	}, [position]);
+	}, [enabled, position]);
 
 	// Calculate scale based on distance - shrinks as it gets closer
 	const calculateScale = () => {
@@ -142,6 +156,8 @@ const CustomCursor = () => {
 		const normalizedDistance = Math.min(distance / maxDistance, 1);
 		return 0.3 + normalizedDistance * 0.7; // Opacity from 0.3 to 1
 	};
+
+	if (!enabled) return null;
 
 	return (
 		<>

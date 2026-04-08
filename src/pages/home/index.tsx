@@ -12,24 +12,26 @@ function Home() {
 
 	return (
 		<div className="home-page">
-			<ScrollFadeSection id="hero" data-theme="hero">
-				<HeroSection />
-			</ScrollFadeSection>
-			<ScrollFadeSection id="experience" data-theme="experience">
-				<ExperienceSection />
-			</ScrollFadeSection>
-			<ScrollFadeSection id="education" data-theme="education">
-				<EducationSection />
-			</ScrollFadeSection>
-			<ScrollFadeSection id="projects" data-theme="projects">
-				<ProjectsSection />
-			</ScrollFadeSection>
-			<ScrollFadeSection id="skills" data-theme="skills">
-				<Skills />
-			</ScrollFadeSection>
-			<ScrollFadeSection id="publications" data-theme="publications">
-				<PublicationsSection />
-			</ScrollFadeSection>
+			<div className="home-page__mobile-frame">
+				<ScrollFadeSection id="hero" data-theme="hero">
+					<HeroSection />
+				</ScrollFadeSection>
+				<ScrollFadeSection id="experience" data-theme="experience">
+					<ExperienceSection />
+				</ScrollFadeSection>
+				<ScrollFadeSection id="education" data-theme="education">
+					<EducationSection />
+				</ScrollFadeSection>
+				<ScrollFadeSection id="projects" data-theme="projects">
+					<ProjectsSection />
+				</ScrollFadeSection>
+				<ScrollFadeSection id="skills" data-theme="skills">
+					<Skills />
+				</ScrollFadeSection>
+				<ScrollFadeSection id="publications" data-theme="publications">
+					<PublicationsSection />
+				</ScrollFadeSection>
+			</div>
 		</div>
 	);
 }

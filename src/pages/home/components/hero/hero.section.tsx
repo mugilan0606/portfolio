@@ -32,7 +32,7 @@ function HeroSection() {
 							</p>
 							<div className={CN.generate('actions')}>
 								<Hyperlink
-									variant={'primary-light'}
+									variant={'primary-gold'}
 									to={links["social"]["resume"]}
 									target="_blank"
 									data-tooltip-id="tooltip-area"
@@ -43,7 +43,7 @@ function HeroSection() {
 								</Hyperlink>
 								<Hyperlink
 									icon={true}
-									variant={'linear-light'}
+									variant={'linear-gold'}
 									to={links["social"]["linkedin"]}
 									target="_blank"
 									data-tooltip-id="tooltip-area"
@@ -54,7 +54,7 @@ function HeroSection() {
 								</Hyperlink>
 								<Hyperlink
 									icon={true}
-									variant={'linear-light'}
+									variant={'linear-gold'}
 									to={links["social"]["github"]}
 									target="_blank"
 									data-tooltip-id="tooltip-area"
@@ -65,7 +65,7 @@ function HeroSection() {
 								</Hyperlink>
 								<Hyperlink
 									icon={true}
-									variant={'linear-light'}
+									variant={'linear-gold'}
 									to={`mailto:${links["social"]["email"]}`}
 									data-tooltip-id="tooltip-area"
 									data-tooltip-content="Email"

@@ -8,7 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: none;
+  cursor: auto;
 }
 
 @media (max-width: 768px) {
@@ -20,7 +20,17 @@ body {
 }
 
 * {
-  cursor: none !important;
+  cursor: inherit;
+}
+
+@media (pointer: fine) and (hover: hover) {
+  body {
+    cursor: none;
+  }
+
+  * {
+    cursor: none !important;
+  }
 }
 
 code {

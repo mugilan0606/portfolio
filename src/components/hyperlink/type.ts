@@ -3,7 +3,15 @@ import React from 'react';
 
 export interface HyperlinkProps {
 	text?: string;
-	variant?: 'primary-dark' | 'primary-light' | 'secondary' | 'ghost-dark' | 'ghost-light' | 'linear-light';
+	variant?:
+		| 'primary-dark'
+		| 'primary-light'
+		| 'primary-gold'
+		| 'secondary'
+		| 'ghost-dark'
+		| 'ghost-light'
+		| 'linear-light'
+		| 'linear-gold';
 	icon?: boolean;
 	iconName?: IconType;
 	iconPosition?: 'left' | 'right';

@@ -6,6 +6,246 @@
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .home-page {
+    width: 100%;
+    overflow-x: hidden;
+
+    &__mobile-frame {
+      width: 100%;
+      max-width: 430px;
+      margin: 0 auto;
+      padding: 0 px-to-rem(14);
+      box-sizing: border-box;
+
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .col {
+        padding-left: px-to-rem(2);
+        padding-right: px-to-rem(2);
+      }
+    }
+  }
+
+  .home-page__mobile-frame {
+    /* Hero */
+    .hero {
+      padding-bottom: px-to-rem(56);
+
+      &__content {
+        width: 100%;
+        margin-bottom: px-to-rem(22);
+
+        > h1 {
+          font-size: px-to-rem(36);
+          line-height: 1.15;
+          margin-bottom: px-to-rem(14);
+          max-width: 100%;
+          overflow-wrap: anywhere;
+        }
+
+        > p {
+          max-width: 100%;
+          font-size: px-to-rem(15);
+          line-height: 1.55;
+          text-align: left;
+          text-align-last: auto;
+          overflow-wrap: anywhere;
+          margin-bottom: px-to-rem(14);
+        }
+      }
+
+      &__actions {
+        flex-wrap: wrap;
+        gap: px-to-rem(8);
+      }
+    }
+
+    /* Experience -> cards */
+    .experience {
+      padding: px-to-rem(46) 0;
+
+      &__section-title {
+        font-size: px-to-rem(34);
+        letter-spacing: 0.04em;
+        margin-bottom: px-to-rem(26);
+      }
+
+      &__item {
+        background: var(--secondary-color);
+        border: 1px solid var(--accent-color);
+        border-radius: px-to-rem(12);
+        padding: px-to-rem(16);
+        margin-bottom: px-to-rem(14);
+      }
+
+      &__bullet {
+        display: none;
+      }
+
+      &__item {
+        padding-left: px-to-rem(16);
+      }
+
+      &__details {
+        padding-left: 0;
+      }
+
+      &__item ul {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      &__objective {
+        display: block;
+        margin-bottom: px-to-rem(12);
+      }
+
+      &__objective > p {
+        text-align: justify;
+        text-justify: inter-word;
+        margin: 0;
+      }
+
+      &__objective > span {
+        display: none;
+      }
+    }
+
+    /* Education -> cards, no timeline rail */
+    .education-section {
+      padding: px-to-rem(46) 0;
+
+      &__section-title {
+        font-size: px-to-rem(34);
+        margin-bottom: px-to-rem(26);
+        letter-spacing: 0.04em;
+      }
+
+      &__timeline {
+        padding-left: 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &__item {
+        margin-bottom: px-to-rem(14);
+      }
+
+      &__marker {
+        display: none;
+      }
+
+      &__content {
+        margin-left: 0;
+        padding: px-to-rem(14);
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      &__coursework ul {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Projects -> swipe carousel cards */
+    .projects-section {
+      padding: px-to-rem(46) 0;
+
+      &__section-title {
+        font-size: px-to-rem(34);
+        margin-bottom: px-to-rem(26);
+        letter-spacing: 0.04em;
+      }
+
+      .row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        gap: px-to-rem(12);
+        margin: 0;
+        padding: 0 px-to-rem(2) px-to-rem(8);
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .col {
+        flex: 0 0 88%;
+        max-width: 88%;
+        padding: 0;
+        margin-bottom: 0;
+        scroll-snap-align: start;
+      }
+
+      &__card {
+        min-height: auto;
+        height: auto;
+        margin-bottom: 0;
+        padding: px-to-rem(14);
+      }
+
+      &__links {
+        gap: px-to-rem(8);
+      }
+    }
+
+    /* Skills margins fit frame */
+    .skills-section {
+      padding: px-to-rem(46) 0;
+
+      &__section-title {
+        font-size: px-to-rem(34);
+        margin-bottom: px-to-rem(26);
+        letter-spacing: 0.04em;
+      }
+
+      &__grid {
+        width: 100%;
+        gap: px-to-rem(12);
+      }
+
+      &__category {
+        padding: px-to-rem(14);
+      }
+    }
+
+    /* Publications margins fit frame */
+    .publications {
+      padding: px-to-rem(46) 0;
+
+      &__section-title {
+        font-size: px-to-rem(34);
+        margin-bottom: px-to-rem(26);
+        letter-spacing: 0.04em;
+      }
+
+      &__list {
+        margin-bottom: px-to-rem(20);
+      }
+
+      &__item {
+        padding: px-to-rem(14);
+        gap: px-to-rem(10);
+      }
+    }
+  }
+}
+
 // .experience {
 //     position: relative;
 //     padding: px-to-rem(50) px-to-rem(20);
