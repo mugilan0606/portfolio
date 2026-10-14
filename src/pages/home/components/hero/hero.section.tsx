@@ -26,7 +26,7 @@ function HeroSection() {
 							<h1>Hi, 👋🏻<br/> <i>I'm</i> Mugilan</h1>
 							<p>
 								Software Engineer with 2+ years of experience specializing in 
-								infrastructure automation and full-stack development. Currently pursuing MS in Computer Science 
+								infrastructure and AI automation. Currently pursuing MS in Computer Science 
 								at UMass Amherst. Passionate about building 
 								scalable solutions and exploring cutting-edge technologies in AI and Systems.
 							</p>

@@ -7,16 +7,23 @@ import { ClassNames } from '@/modules/classNames';
 
 // Embedded experience data
 const experienceData = {
+	rivianvw: {
+		"0": "Build automation workflows in Python using AI agents (Devin) that integrate across internal platforms including Slack and Databricks, validating AI-generated output with a human in the loop before it reaches production",
+		"1": "Manage GitLab CI/CD pipelines and DevOps practices to safely deploy changes to production across cross-platform systems integration projects",
+		"2": "Automate testing with pytest to catch regressions early, improving the quality and reliability of integration code",
+		"3": "Build data visualization dashboards that filter operational metrics into actionable signals for the team"
+	},
 	hpe: {
-		"0": "Developed an automation framework with Ansible and Python, single-handedly automated server configuration tasks for ESXi, vCenter, DNS, vDS, multiple VMs - reducing deployment time from 6 days to 5 hours (97% decrease in deployment time) and contributed to over $40m in revenue",
-		"1": "Executed end-to-end infrastructure deployments on Baremetal servers and ESXi Hypervisors, including DNS setup, virtual switch and cluster creation, VM migration (vSS → vDS) without downtime, and provisioning of management VMs",
-		"2": "Spearheaded security of the CDC solution by including encryption mechanisms with AES-256 using HashiCorp for passwords",
-		"3": "Enhanced provisioning workflows by customizing Kickstart and enabling support for RHEL 8.8/9.2 and SUSE 15 SP5 in SAP HANA-based PDC solutions",
-		"4": "Implemented multilingual support in the automation application, enabling global accessibility and improving adoption across international teams"
+		"0": "Designed and built a distributed provisioning system in Python and Ansible to orchestrate ESXi/vCenter cloud environments across multi-node enterprise clusters - reducing deployment time from 6 days to 5 hours (97% reduction) and contributing to $40M+ in revenue",
+		"1": "Engineered orchestration workflows for infrastructure lifecycle management on Baremetal servers and ESXi Hypervisors, automating DNS setup, virtual switch creation and zero-downtime VM migration (vSS → vDS)",
+		"2": "Built internal REST APIs and CLI tooling in Python to expose provisioning status and trigger deployments, integrated with enterprise monitoring and ticketing systems",
+		"3": "Architected modular, reusable Python components for provisioning Linux systems (RHEL 8.8/9.2, SUSE 15 SP5) in SAP HANA-based solutions, reducing configuration errors across large-scale deployments",
+		"4": "Implemented secure credential management using AES-256 encryption integrated with HashiCorp Vault for production systems handling sensitive configuration data"
 	},
 	samit: {
-		"0": "Designed and deployed a sentiment analysis framework on 100k+ client emails using LSTM models with fine-grained sentiment categories, achieving 95% accuracy through optimized preprocessing and tuning",
-		"1": "Built a prototype application that enabled ticket prioritization and faster client response, reducing manual effort and improving customer satisfaction"
+		"0": "Built an end-to-end machine learning pipeline in Python using PyTorch LSTM models to classify 100K+ unstructured client emails into fine-grained sentiment categories, reaching 95% accuracy through preprocessing, sequence modeling and hyperparameter tuning",
+		"1": "Developed a backend ticket prioritization system with a REST API, reducing manual triage effort and improving client response efficiency",
+		"2": "Wrote unit and integration tests and documented technical designs alongside senior engineers"
 	}
 };
 
@@ -24,10 +31,20 @@ function ExperienceSection() {
 	const CN = new ClassNames('experience');
 	
 	// Extract objectives from embedded data
+	const rivianVwObjectives: Array<string> = Object.values(experienceData.rivianvw);
 	const hpeObjectives: Array<string> = Object.values(experienceData.hpe);
 	const samItObjectives: Array<string> = Object.values(experienceData.samit);
 
 	const experiencesList: Array<Experience> = [
+		{
+			title: 'Rivian and Volkswagen Technologies',
+			type: 'On-Site',
+			position: 'Software Engineering Intern, Systems Integrations',
+			location: 'Irvine, CA',
+			date: 'Sep. 2026 - Present',
+			translation_key: 'rivianvw',
+			objectives: rivianVwObjectives,
+		},
 		{
 			title: 'Hewlett Packard Enterprise',
 			type: 'On-Site',
